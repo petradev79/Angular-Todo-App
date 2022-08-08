@@ -1,0 +1,13 @@
+<app-todo-form (todoAdded)="onTodoAdded($event)"></app-todo-form>
+<ul class="list-group" *ngIf="todos.length; else infoText">
+  <li class="list-group-item" *ngFor="let todoEl of todos">
+    <app-todo-item
+      [todo]="todoEl"
+      (todoSelected)="deleteTodo($event)"
+      (todoEdited)="editTodo($event)"
+    ></app-todo-item>
+  </li>
+</ul>
+<ng-template #infoText>
+  <div class="alert alert-primary">Please select a Recipe</div>
+</ng-template>

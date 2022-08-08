@@ -1,0 +1,17 @@
+<form
+  class="row my-4 mt-5 gy-2 gx-3 justify-content-center align-items-center"
+  (submit)="onAddTodo()"
+>
+  <div class="input-group">
+    <input
+      name="inputTodo"
+      type="text"
+      class="form-control form-control-lg"
+      placeholder="Enter todo..."
+      [(ngModel)]="inputTodo"
+    />
+    <button type="submit" class="btn btn-primary">
+      <i class="bi bi-plus-square me-2"></i> Submit
+    </button>
+  </div>
+</form>
