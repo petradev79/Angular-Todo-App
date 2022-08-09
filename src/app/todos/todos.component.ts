@@ -27,7 +27,6 @@ export class TodosComponent implements OnInit {
 
   onTodoAdded(newTodo: Todo) {
     this.todos.push(newTodo);
-    console.log(this.todos);
   }
 
   deleteTodo(id: string) {
