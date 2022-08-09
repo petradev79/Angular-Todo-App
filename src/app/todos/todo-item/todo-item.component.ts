@@ -33,4 +33,8 @@ export class TodoItemComponent implements OnInit {
     this.todoEdited.emit(editedTodo);
     this.isEditing = false;
   }
+
+  onCancelEditTodo() {
+    this.isEditing = false;
+  }
 }

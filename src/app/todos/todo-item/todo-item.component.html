@@ -39,14 +39,32 @@
     </div>
   </div>
 </div>
-<div class="input-group mt-3" *ngIf="isEditing">
-  <input
-    type="text"
-    class="form-control"
-    [(ngModel)]="newTodoContent"
-    appAutoFocus
-  />
-  <button type="submit" class="btn btn-success" (click)="onEditedTodo(todo.id)">
-    <i class="bi bi-send"></i>
+<div
+  class="d-flex justify-content-between align-items-center mt-3"
+  *ngIf="isEditing"
+>
+  <div class="input-group">
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="newTodoContent"
+      appAutoFocus
+    />
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="onEditedTodo(todo.id)"
+      title="Send"
+    >
+      <i class="bi bi-send"></i>
+    </button>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-danger ms-2"
+    (click)="onCancelEditTodo()"
+    title="Cancel"
+  >
+    <i class="bi bi-x-lg"></i>
   </button>
 </div>
