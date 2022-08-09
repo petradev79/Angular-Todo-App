@@ -40,7 +40,12 @@
   </div>
 </div>
 <div class="input-group mt-3" *ngIf="isEditing">
-  <input type="text" class="form-control" [(ngModel)]="newTodoContent" />
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="newTodoContent"
+    appAutoFocus
+  />
   <button type="submit" class="btn btn-success" (click)="onEditedTodo(todo.id)">
     <i class="bi bi-send"></i>
   </button>
