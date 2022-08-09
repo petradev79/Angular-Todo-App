@@ -1,7 +1,7 @@
 import { Directive, ElementRef, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appAutoFocus]',
+  selector: '[autoFocus]',
 })
 export class AutoFocusDirective implements OnInit {
   private inputElement: HTMLElement;
